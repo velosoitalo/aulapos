@@ -4,7 +4,7 @@
  */
 package com.fabricio.AulaPos.controllers;
 
-import com.fabricio.AulaPos.Pessoa;
+import com.fabricio.AulaPos.models.Pessoa;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+ 
 /**
- *
- * @author italo
- */
+*
+* @author fabri
+*/
 @Controller
 @RequestMapping("/pessoa")
 public class PessoaController 
