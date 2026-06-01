@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/pessoa")
 public class PessoaController 
 {
-    private List<Pessoa> pessoas = new ArrayList<>();
+    private static final List<Pessoa> pessoas = new ArrayList<>();
     @PostMapping("/pessoa")
     @ResponseBody
     public Pessoa criar(@RequestBody Pessoa p)
@@ -42,6 +42,11 @@ public class PessoaController
     @ResponseBody
     public Optional<Pessoa> buscar(@PathVariable String nome)
     {
+        /*for (Pessoa p : pessoas){
+            if(p.getNome().equalsIgnoreCase(nome)){
+                return p;
+            }
+        }*/
         return pessoas.stream().filter(p -> p.getNome().equalsIgnoreCase(nome)).findFirst();
     }
 }
