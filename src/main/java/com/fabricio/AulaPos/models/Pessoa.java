@@ -8,67 +8,34 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
-
+import jakarta.persistence.Id;
+ 
 /**
- *
- * @author italo
- */
+*
+* @author fabri
+*/
 @Entity
-public class Pessoa {
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
-    
-    @Column(nullable=false)
-    private String nome;
-    
-    /**
-
-     * @return the id
-
-     */
-
-    public Long getId() {
-
-        return id;
-
-    }
+public class Pessoa 
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(nullable = false)
+	private String nome;
  
-    /**
-
-     * @param id the id to set
-
-     */
-
-    public void setId(Long id) {
-
-        this.id = id;
-
-    }
+	public Long getId() {
+		return id;
+	}
  
-    /**
-
-     * @return the nome
-
-     */
-
-    public String getNome() {
-
-        return nome;
-
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
  
-    /**
-
-     * @param nome the nome to set
-
-     */
-
-    public void setNome(String nome) {
-
-        this.nome = nome;
-
-    }
+	public String getNome() {
+		return nome;
+	}
  
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 }
